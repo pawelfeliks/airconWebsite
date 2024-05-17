@@ -67,6 +67,18 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Styl dla obrazka w sekcji About Me */
+.about-image {
+    width: 50px; /* Ustaw pożądany rozmiar */
+    height: 300px;
+}
+
+/* Styl dla kontenera obrazka */
+.image-container {
+    display: flex;
+    justify-content: center; /* Wycentruj obrazek */
+}
+
 /*Contact-icons*/
 #contact {
     padding: 50px 0;
