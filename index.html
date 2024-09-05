@@ -8,6 +8,34 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <!-- Font Awesome CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMbU35kDGFt9G5GZB1CJvB5sX1lF/3k3QDeM9s7" crossorigin="anonymous">
+        <style>
+            /* Flag Styles */
+            .lang-switcher button {
+                background: none;
+                border: none;
+                padding: 0;
+                margin-right: 15px; /* Space between the flags */
+                cursor: pointer;
+            }
+
+            .lang-switcher button img.flag {
+                width: 40px; /* Increase flag size */
+                height: auto;
+            }
+
+            /* Add space between avatar and text */
+            #logo {
+                margin-bottom: 30px; /* Adjust the spacing between avatar and text */
+            }
+
+            #title {
+                margin-top: 20px; /* Add space between the avatar and the title text */
+            }
+
+            #subtitle {
+                margin-top: 10px; /* Space between title and subtitle */
+            }
+        </style>
     </head>
     <body class="is-preload">
 
@@ -18,7 +46,7 @@
                 <!-- Logo -->
                 <div id="logo">
                     <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-                    <h1 id="title">Klmatyzacje</h1>
+                    <h1 id="title">Klimatyzacje</h1>
                     <p>Tomasz Ciura</p>
                 </div>
 
@@ -48,6 +76,19 @@
 
         <!-- Main -->
         <div id="main">
+            <!-- Language Switcher -->
+            <div class="lang-switcher" style="position: absolute; top: 10px; right: 20px; margin-bottom: 100px;">
+                <button onclick="setLanguage('pl')">
+                    <img src="images/pic-pl.png" alt="Polish" class="flag">
+                </button>
+                <button onclick="setLanguage('en')">
+                    <img src="images/pic-en.jpg" alt="English" class="flag">
+                </button>
+                <button onclick="setLanguage('de')">
+                    <img src="images/pic-de.png" alt="German" class="flag">
+                </button>
+            </div>
+
 
             <!-- Intro -->
             <section id="top" class="one dark cover">
@@ -76,7 +117,7 @@
                     <div class="row">
                         <div class="col-4 col-12-mobile">
                             <article class="item">
-                                <a href="https://www.olx.pl/d/oferta/klimatyzacja-montaz-serwis-CID628-ID10kEHG.html?bs=olx_pro_listing" class="image fit">
+                                <a href="https://www.olx.pl/d/oferta/klimatyzacja-montaz-CID628-ID11iN4d.html" class="image fit">
                                     <img src="images/olx.jpg" alt="" />
                                     <span class="icon fa-solid fa-link"></span>
                                 </a>
@@ -204,5 +245,143 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
+
+        <script>
+            const translations = {
+                pl: {
+                    pageTitle: "Kontakt - Klimatyzacja Częstochowa",
+                    metaDescription: "Skontaktuj się z nami, aby dowiedzieć się więcej o naszych usługach klimatyzacyjnych w Częstochowie.",
+                    homeText: "Główna",
+                    servicesText: "Usługi",
+                    aboutText: "O Firmie",
+                    contactText: "Główna",
+                    galleryText: "Galeria",
+                    introHeading: "Klimatyzacje <strong>Profesjonalnie</strong><br /> komfortowo i kompleksowo",
+                    introText: "Najlepsze usługi Klimatyzacje i hydraulika oraz wiele innych usług",
+                    contactButton: "Główna",
+                    servicesHeading: "Usługi",
+                    servicesText1: "Oferujemy szeroką gamę usług z zakresu montażu, serwisu i naprawy klimatyzacji.",
+                    servicesText2: "Zajmujemy się również usługami hydraulicznymi oraz wiele innych!",
+                    olxHeading: "OLX",
+                    facebookHeading: "Polub nas na Facebooku!",
+                    googleHeading: "Google",
+                    fixlyHeading: "Fixly",
+                    aboutHeading: "O Firmie",
+                    aboutText1: "Jesteśmy Twoim zaufanym partnerem w dziedzinie klimatyzacji i hydrauliki. Nasza misja to zapewnienie komfortu i funkcjonalności w Twoim domu i biurze.",
+                    aboutText2: "Jesteśmy certyfikowanym serwisem cenionej i rekomendowanej firmy KASAI!",
+                    contactHeading: "Kontakt",
+                    contactText: "Kontakt",
+                    contactDetailsEmail: "Email: kontakt@klimaczest.com",
+                    contactDetailsPhone: "Telefon: +48 790 556 060",
+                    openingHours: "Godziny otwarcia:",
+                    openingHoursDetails: "Poniedziałek - Piątek: 8:00 - 18:00<br>Sobota: 9:00 - 14:00<br>Niedziela: Zamknięte",
+                    footerText: "Wszelkie prawa zastrzeżone."
+                },
+                en: {
+                    pageTitle: "Contact - Air Conditioning Czestochowa",
+                    metaDescription: "Contact us to learn more about our air conditioning services in Czestochowa.",
+                    homeText: "Home",
+                    servicesText: "Services",
+                    aboutText: "About Us",
+                    contactText: "Home",
+                    galleryText: "Gallery",
+                    introHeading: "Air Conditioning <strong>Professionally</strong><br /> Comfortably and Completely",
+                    introText: "Best services Air Conditioning, plumbing, and more!",
+                    contactButton: "Home",
+                    servicesHeading: "Services",
+                    servicesText1: "We offer a wide range of installation, maintenance, and repair services for air conditioning.",
+                    servicesText2: "We also provide plumbing services and much more!",
+                    olxHeading: "OLX",
+                    facebookHeading: "Like us on Facebook!",
+                    googleHeading: "Google",
+                    fixlyHeading: "Fixly",
+                    aboutHeading: "About Us",
+                    aboutText1: "We are your trusted partner in air conditioning and plumbing. Our mission is to ensure comfort and functionality in your home and office.",
+                    aboutText2: "We are a certified service provider for the reputable KASAI brand!",
+                    contactHeading: "Contact",
+                    contactText: "Contact",
+                    contactDetailsEmail: "Email: kontakt@klimaczest.com",
+                    contactDetailsPhone: "Phone: +48 790 556 060",
+                    openingHours: "Opening Hours:",
+                    openingHoursDetails: "Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed",
+                    footerText: "All rights reserved."
+                },
+                de: {
+                    pageTitle: "Kontakt - Klimaanlage Czestochowa",
+                    metaDescription: "Kontaktieren Sie uns, um mehr über unsere Klimaanlagenleistungen in Czestochowa zu erfahren.",
+                    homeText: "Startseite",
+                    servicesText: "Dienstleistungen",
+                    aboutText: "Über Uns",
+                    contactText: "Startseite",
+                    galleryText: "Galerie",
+                    introHeading: "Klimaanlagen <strong>Professionell</strong><br /> komfortabel und umfassend",
+                    introText: "Die besten Dienstleistungen Klimaanlagen und Hydraulik und viele andere Dienstleistungen",
+                    contactButton: "Startseite",
+                    servicesHeading: "Dienstleistungen",
+                    servicesText1: "Wir bieten eine breite Palette von Dienstleistungen im Bereich Installation, Wartung und Reparatur von Klimaanlagen.",
+                    servicesText2: "Wir bieten auch hydraulische Dienstleistungen und vieles mehr!",
+                    olxHeading: "OLX",
+                    facebookHeading: "Folge uns auf Facebook!",
+                    googleHeading: "Google",
+                    fixlyHeading: "Fixly",
+                    aboutHeading: "Über Uns",
+                    aboutText1: "Wir sind Ihr vertrauenswürdiger Partner im Bereich Klimaanlagen und Hydraulik. Unsere Mission ist es, Komfort und Funktionalität in Ihrem Zuhause und Büro zu gewährleisten.",
+                    aboutText2: "Wir sind ein zertifizierter Dienstleister der renommierten Marke KASAI!",
+                    contactHeading: "Kontakt",
+                    contactText: "Kontakt",
+                    contactDetailsEmail: "Email: kontakt@klimaczest.com",
+                    contactDetailsPhone: "Telefon: +48 790 556 060",
+                    openingHours: "Öffnungszeiten:",
+                    openingHoursDetails: "Montag - Freitag: 8:00 - 18:00 Uhr<br>Samstag: 9:00 - 14:00 Uhr<br>Sonntag: Geschlossen",
+                    footerText: "Alle Rechte vorbehalten."
+                }
+            };
+        
+            function setLanguage(language) {
+                // Set page title and meta description
+                document.title = translations[language].pageTitle;
+                document.querySelector('meta[name="description"]').setAttribute('content', translations[language].metaDescription);
+                
+                // Update menu text
+                document.getElementById('top-link').textContent = translations[language].homeText;
+                document.getElementById('portfolio-link').textContent = translations[language].servicesText;
+                document.getElementById('about-link').textContent = translations[language].aboutText;
+                document.getElementById('contact-link').textContent = translations[language].contactText;
+                document.querySelector('a[href="gallery.html"]').textContent = translations[language].galleryText;
+                
+                // Update intro section
+                document.querySelector('#top h2').innerHTML = translations[language].introHeading;
+                document.querySelector('#top p').textContent = translations[language].introText;
+                document.querySelector('.scrolly').textContent = translations[language].contactButton;
+                
+                // Update services section
+                document.querySelector('#portfolio h2').textContent = translations[language].servicesHeading;
+                document.querySelectorAll('#portfolio p')[0].textContent = translations[language].servicesText1;
+                document.querySelectorAll('#portfolio p')[1].textContent = translations[language].servicesText2;
+                document.querySelectorAll('#portfolio .col-4 h3')[0].textContent = translations[language].olxHeading;
+                document.querySelectorAll('#portfolio .col-4 h3')[1].textContent = translations[language].facebookHeading;
+                document.querySelectorAll('#portfolio .col-4 h3')[2].textContent = translations[language].googleHeading;
+                document.querySelectorAll('#portfolio .col-4 h3')[3].textContent = translations[language].fixlyHeading;
+                
+                // Update about section
+                document.querySelector('#about h2').textContent = translations[language].aboutHeading;
+                document.querySelectorAll('#about p')[0].textContent = translations[language].aboutText1;
+                document.querySelectorAll('#about p')[1].textContent = translations[language].aboutText2;
+                
+                // Update contact section
+                document.querySelector('#contact h2').textContent = translations[language].contactHeading;
+                document.querySelector('#contact p').textContent = translations[language].contactText;
+                document.querySelector('.contact-details p:nth-child(1)').innerHTML = translations[language].contactDetailsEmail;
+                document.querySelector('.contact-details p:nth-child(2)').innerHTML = translations[language].contactDetailsPhone;
+                document.querySelector('.opening-hours p:nth-child(2)').innerHTML = translations[language].openingHoursDetails;
+                
+                // Update footer
+                document.querySelector('#footer .copyright li').textContent = translations[language].footerText;
+            }
+        
+            // Set default language on page load
+            setLanguage('pl');
+        </script>        
+
     </body>
 </html>
